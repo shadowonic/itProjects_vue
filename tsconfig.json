@@ -20,6 +20,9 @@
       ],
       "@models": [
         "./src/models"
+      ],
+      "@api": [
+        "./src/api"
       ]
     },
     "lib": [
