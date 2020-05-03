@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import {Api} from '../services/api'
+import { Api} from '../services/api/api'
 declare module "vue/types/options"
 
 {

@@ -1,24 +1,24 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div >
+    <ToDoCard class="card" />
+    <AddToDoCard class="card" />
   </div>
 </template>
 
 <script lang="ts">
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 import Vue from 'vue'
 import { Component } from 'vue-property-decorator';
+import AddToDoCard from '@/components/AddToDoCard.vue'
+import ToDoCard from '@/components/ToDoCard.vue'
 @Component({
-   components: {
-    HelloWorld
-  },
+ components: {
+   AddToDoCard,
+   ToDoCard
+ }
 })
 export default class Home extends Vue{
   created() {
     this.$api.toDo.addToDo({name: 'asd'})
-    this.$store.commit('test')
   }
 
 }
