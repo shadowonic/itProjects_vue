@@ -11,6 +11,17 @@ export class ToDoService {
                 tasks: []
             })
         })
-
+    }
+    requestToDoList(): Promise<ToDo[]> {
+        return new Promise((res, rej) => {
+            setTimeout(() => {
+                res([{
+                    id: ObjectId.create(),
+                    name: 'FAKE TO DO',
+                    tasks: []
+                }])
+            }, 500);
+         
+        })
     }
 }

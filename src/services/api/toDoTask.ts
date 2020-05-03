@@ -1,6 +1,17 @@
+import { CreateToDoTask, ToDoTask } from '@/models'
+import { ObjectId } from '../idCreator'
 export class ToDoTaskService {
-     addToDoTask() {
-        console.log('ADD TO DO TASK');
-        
+     addToDoTask(data: CreateToDoTask): Promise<ToDoTask> {
+        return new Promise((res, rej) => {
+            setTimeout(() => {
+                const {value, toDoId} = data;
+                res({
+                    id: ObjectId.create(),
+                    value,
+                    toDoId,
+                    isDone: false
+                })
+            }, 300);
+        })
     }
 }

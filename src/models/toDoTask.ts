@@ -4,3 +4,7 @@ export interface ToDoTask {
     value: string;
     isDone: boolean;
 }
+export interface CreateToDoTask {
+    toDoId: string,
+    value: string
+}
